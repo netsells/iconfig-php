@@ -8,7 +8,13 @@
             "email": "sam@netsells.co.uk"
         }
     ],
-    "require": {},
+    "require": {
+      "psr/http-message": "^1.0",
+      "php-http/client-implementation": "^1.0",
+      "php-http/httplug": "^1.0",
+      "php-http/message-factory": "^1.0",
+      "php-http/discovery": "^1.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "^5.6"
     },
