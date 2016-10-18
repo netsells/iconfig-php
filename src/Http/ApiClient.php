@@ -77,7 +77,6 @@ class ApiClient
             case 400:
                 throw new HTTPException("400", $response);
             case 401:
-                var_dump($response->getResponseBody());
                 throw new HTTPException("401", $response);
             case 404:
                 throw new HTTPException("404", $response);
