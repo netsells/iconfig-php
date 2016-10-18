@@ -32,4 +32,12 @@ class Config
         $this->payloads[] = $payload;
     }
 
+    /**
+     * @return array
+     */
+    public function getPayloads()
+    {
+        return $this->payloads;
+    }
+
 }
