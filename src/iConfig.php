@@ -57,6 +57,11 @@ class iConfig
 
     public function sendConfig($configIdentifier, $email)
     {
+        $response = $this->apiClient->post('api/config/send', [
+            'identifier' => $configIdentifier,
+            'email' => $email,
+        ]);
 
+        return $response->getResponseBody();
     }
 }
