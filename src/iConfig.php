@@ -20,8 +20,12 @@ class iConfig
      * @param $apiId
      * @param $apiSecret
      */
-    public function __construct($apiId, $apiSecret, $apiUserId, HttpClient $httpClient = null, $apiEndpoint = 'api.iconfig.io')
+    public function __construct($apiId, $apiSecret, $apiUserId, HttpClient $httpClient = null, $apiEndpoint = null)
     {
+        if (is_null($apiEndpoint)) {
+            $apiEndpoint = 'api.iconfig.io';
+        }
+
         $this->apiId = $apiId;
         $this->apiSecret = $apiSecret;
         $this->apiUserId = $apiUserId;
